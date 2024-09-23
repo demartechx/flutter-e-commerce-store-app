@@ -34,7 +34,7 @@ class TPromoSlider extends StatelessWidget {
         SizedBox(height: TSizes.spaceBtwItems,),
          Center(
            child: Obx(
-             () => Row(
+             () => Row( 
               mainAxisSize: MainAxisSize.min,
               children: [
                 for (int i = 0; i < 3; i++)

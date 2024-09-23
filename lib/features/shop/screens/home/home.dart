@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:t_store/common/widgets/layouts/grid_layout.dart';
+import 'package:t_store/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:t_store/common/widgets/text/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -18,17 +20,17 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             //header
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   //appbar
-                  const THomeAppBar(),
+                  THomeAppBar(),
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
                   //searchbar
-                  const TSearchContainer(text: 'Search in Store'),
+                  TSearchContainer(text: 'Search in Store'),
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
@@ -39,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         //heading
-                        const TSectionHeading(
+                        TSectionHeading(
                           title: 'Popular Categories',
                           showActionButton: false,
                           textColor: Colors.white,
@@ -49,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                         ),
 
                         //categories
-                        const THomeCategories()
+                        THomeCategories()
                       ],
                     ),
                   )
@@ -59,17 +61,30 @@ class HomeScreen extends StatelessWidget {
 
             //body
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: const TPromoSlider(banners: [
-                TImages.promoBanner1,
-                TImages.promoBanner2,
-                TImages.promoBanner3,
-              ],)
-            )
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    //promo slider
+                    const TPromoSlider(
+                      banners: [
+                        TImages.promoBanner1,
+                        TImages.promoBanner2,
+                        TImages.promoBanner3,
+                      ],
+                    ),
+
+                    const SizedBox(
+                      height: TSizes.spaceBtwSections,
+                    ),
+
+                    //popular products
+                    TGridLayout(itemCount: 4, itemBuilder: (_ , index ) => TProductCardVertical(),),
+                   
+                  ],
+                ))
           ],
         ),
       ),
     );
   }
 }
-
