@@ -101,7 +101,7 @@ class TProductCardVertical extends StatelessWidget {
                       children: [
 
                         //price
-                        const TProductPriceText(price: '35.5',),
+                        const TProductPriceText(price: '35.0',),
 
                         //add to cart button
                         Container(
