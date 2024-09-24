@@ -25,7 +25,7 @@ class SuccessScreen extends StatelessWidget {
             children: [
               //image
               Image(image:  AssetImage(image), width: THelperFunctions.screenWidth() * 0.6,),
-              SizedBox(height: TSizes.spaceBtwSections,),
+              const SizedBox(height: TSizes.spaceBtwSections,),
           
               //title and subtitle
               Text(
@@ -34,13 +34,13 @@ class SuccessScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           
-            SizedBox(height: TSizes.spaceBtwItems,),
+            const SizedBox(height: TSizes.spaceBtwItems,),
              Text(
               subTitle,
               style: Theme.of(context).textTheme.labelMedium,
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: TSizes.spaceBtwSections,),
+            const SizedBox(height: TSizes.spaceBtwSections,),
           
               //buttons
 

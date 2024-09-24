@@ -16,7 +16,7 @@ class TSignupForm extends StatelessWidget {
     
     return Form(
         child: Padding(
-      padding: EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
+      padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
       child: Column(
         children: [
           //first and last name
@@ -30,7 +30,7 @@ class TSignupForm extends StatelessWidget {
                       labelText: TTexts.firstName),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: TSizes.spaceBtwInputFields,
               ),
               Expanded(
@@ -45,7 +45,7 @@ class TSignupForm extends StatelessWidget {
           ),
 
           //username
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
           TextFormField(
@@ -54,7 +54,7 @@ class TSignupForm extends StatelessWidget {
                 prefixIcon: Icon(Iconsax.user_edit),
                 labelText: TTexts.username),
           ),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
 
@@ -64,7 +64,7 @@ class TSignupForm extends StatelessWidget {
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: TTexts.email),
           ),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
 
@@ -73,7 +73,7 @@ class TSignupForm extends StatelessWidget {
             decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.call), labelText: TTexts.phoneNo),
           ),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwInputFields,
           ),
 
@@ -86,13 +86,13 @@ class TSignupForm extends StatelessWidget {
               suffixIcon: Icon(Iconsax.eye_slash),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwSections,
           ),
 
           //terms and condition
           const TTermsAndConditionCheckbox(),
-          SizedBox(
+          const SizedBox(
             height: TSizes.spaceBtwSections,
           ),
 

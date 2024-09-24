@@ -22,7 +22,7 @@ class ResetPassword extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               //image
@@ -30,7 +30,7 @@ class ResetPassword extends StatelessWidget {
                 image: const AssetImage(TImages.deliveredEmailIllustration),
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -41,7 +41,7 @@ class ResetPassword extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               Text(
@@ -49,7 +49,7 @@ class ResetPassword extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -59,7 +59,7 @@ class ResetPassword extends StatelessWidget {
                 child: ElevatedButton(
                     onPressed: () => {}, child: const Text(TTexts.tContinue)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
                SizedBox(

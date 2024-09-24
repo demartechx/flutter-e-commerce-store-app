@@ -14,7 +14,7 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Padding(padding: EdgeInsets.all(TSizes.defaultSpace),
+      body: Padding(padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -24,14 +24,14 @@ Text(
           TTexts.forgetPasswordTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems,
         ),
         Text(
           TTexts.forgetPasswordSubTitle,
           style: Theme.of(context).textTheme.labelMedium,
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwSections * 2,
         ),
 
@@ -45,7 +45,7 @@ Text(
               labelText: TTexts.email,
             ),
           ),
-           SizedBox(
+           const SizedBox(
           height: TSizes.spaceBtwSections,
         ),
 

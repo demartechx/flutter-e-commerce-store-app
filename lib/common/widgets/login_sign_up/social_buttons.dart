@@ -23,7 +23,7 @@ class TSocialButtons extends StatelessWidget {
             height: TSizes.iconMd,
             image: AssetImage(TImages.google))),
         ),
-        SizedBox(width: TSizes.spaceBtwItems,),
+        const SizedBox(width: TSizes.spaceBtwItems,),
     
          Container(
           decoration: BoxDecoration(

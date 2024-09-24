@@ -25,7 +25,7 @@ class VerifyEmailScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               //image
@@ -33,7 +33,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 image: const AssetImage(TImages.deliveredEmailIllustration),
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -43,7 +43,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               Text(
@@ -51,7 +51,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelLarge,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               Text(
@@ -59,7 +59,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -76,7 +76,7 @@ class VerifyEmailScreen extends StatelessWidget {
                         )),
                     child: const Text(TTexts.tContinue)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               SizedBox(
