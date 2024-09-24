@@ -5,6 +5,7 @@ import 'package:t_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:t_store/common/widgets/images/t_rounded_image.dart';
 import 'package:t_store/common/widgets/products/t_rounded_container.dart';
 import 'package:t_store/common/widgets/text/product_title_text.dart';
+import 'package:t_store/common/widgets/text/t_brand_title_text_with_verified_icon.dart';
 import 'package:t_store/common/widgets/text/t_product_price_text.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
@@ -72,36 +73,35 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
+
             //details
-            Padding(
-                padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+                padding: EdgeInsets.only(left: TSizes.sm),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const TProductTitleText(
+                    TProductTitleText(
                       title: 'Green Nike Air Shoes',
                       smallSize: true,
                     ),
-                    const SizedBox(height: TSizes.spaceBtwItems / 2,),
-                    Row(
-                      children: [
-                        Text(
-                          'Nike',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                        const SizedBox(width: TSizes.xs,),
-                        const Icon(Iconsax.verify5, color: TColors.primary, size: TSizes.iconXs,),
-                      ],
-                    ),
-                    // Spacer(),
+                    SizedBox(height: TSizes.spaceBtwItems / 2,),
+                    TBrandTitleWithVerifiedIcon(title: 'Nike')
+               
+                  ],
+                )
+                ),
+
+                     //push content to bo ttom
+                    const Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
 
                         //price
-                        const TProductPriceText(price: '35.0',),
+                        const Padding(
+                          padding: EdgeInsets.only(left: TSizes.sm),
+                          child: TProductPriceText(price: '35.0',),
+                        ),
 
                         //add to cart button
                         Container(
@@ -119,12 +119,10 @@ class TProductCardVertical extends StatelessWidget {
                         )
                       ],
                     )
-                  ],
-                ))
+
           ],
         ),
       ),
     );
   }
 }
-
