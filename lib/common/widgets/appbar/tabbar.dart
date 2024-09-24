@@ -24,7 +24,11 @@ class TTapBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
 
-    return Padding(
+    return Container(
+      color: THelperFunctions.isDarkMode(context)
+                      ? TColors.black
+                      : TColors.white,
+
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
       child: TabBar(
           isScrollable: true,

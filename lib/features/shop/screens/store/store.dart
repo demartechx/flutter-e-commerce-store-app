@@ -21,7 +21,11 @@ class Store extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
+        backgroundColor: THelperFunctions.isDarkMode(context)
+                      ? TColors.black
+                      : TColors.white,
         appBar: TAppBar(
+          
           title: Text(
             'Store',
             style: Theme.of(context).textTheme.headlineMedium,
@@ -29,11 +33,15 @@ class Store extends StatelessWidget {
           actions: [
             TCartCounterIcon(
               onPressed: () {},
-              iconColor: Colors.black,
+              iconColor: THelperFunctions.isDarkMode(context)
+                      ? TColors.white
+                      : TColors.black,
             )
           ],
         ),
         body: NestedScrollView(
+          
+          
             headerSliverBuilder: (_, innerBoxIsScrolled) {
               return [
                 SliverAppBar(

@@ -20,7 +20,7 @@ class TProductCardVertical extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -31,9 +31,10 @@ class TProductCardVertical extends StatelessWidget {
                 ? TColors.darkerGrey
                 : TColors.white),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //thumpnail, wishlist button, discount tag
-      
+
             TRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
@@ -45,7 +46,7 @@ class TProductCardVertical extends StatelessWidget {
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
                   ),
-      
+
                   //sale tag
                   Positioned(
                     top: 12,
@@ -80,46 +81,52 @@ class TProductCardVertical extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(
+                      height: TSizes.spaceBtwItems / 2,
+                    ),
                     TProductTitleText(
                       title: 'Green Nike Air Shoes',
                       smallSize: true,
                     ),
-                    SizedBox(height: TSizes.spaceBtwItems / 2,),
+                    SizedBox(
+                      height: TSizes.spaceBtwItems / 2,
+                    ),
                     TBrandTitleWithVerifiedIcon(title: 'Nike')
-               
                   ],
-                )
+                )),
+
+            //push content to bo ttom
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                //price
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(
+                    price: '35.0',
+                  ),
                 ),
 
-                     //push content to bo ttom
-                    const Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-
-                        //price
-                        const Padding(
-                          padding: EdgeInsets.only(left: TSizes.sm),
-                          child: TProductPriceText(price: '35.0',),
-                        ),
-
-                        //add to cart button
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(TSizes.cardRadiusMd),
-                              bottomRight: Radius.circular(TSizes.productImageRadius)
-                            )
-                          ),
-                          child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(child: Icon(Iconsax.add, color: TColors.white,))),
-                        )
-                      ],
-                    )
-
+                //add to cart button
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius))),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(
+                        Iconsax.add,
+                        color: TColors.white,
+                      ))),
+                )
+              ],
+            )
           ],
         ),
       ),

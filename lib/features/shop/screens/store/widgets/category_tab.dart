@@ -18,6 +18,7 @@ class TCategoryTab extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
+      
       children: [
         Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
