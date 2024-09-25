@@ -20,7 +20,7 @@ dependencies:
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.1
   smooth_page_indicator: ^1.2.0+3
-  carousel_slider: ^5.0.0
+  
 
   # Icons
   iconsax: ^0.0.8
@@ -31,6 +31,7 @@ dependencies:
   get_storage: ^2.1.1
 
   # Product Specific
+  carousel_slider: ^5.0.0
   readmore: ^2.2.0
   flutter_rating_bar: ^4.0.1
   capped_progress_indicator: ^0.0.2

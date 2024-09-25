@@ -19,9 +19,6 @@ class Store extends StatelessWidget {
     return DefaultTabController(
       length: 5,
       child: Scaffold(
-        backgroundColor: THelperFunctions.isDarkMode(context)
-                      ? TColors.black
-                      : TColors.white,
         appBar: TAppBar(
           
           title: Text(
