@@ -60,6 +60,7 @@ flutter:
     - assets/images/animations/
     - assets/images/products/
     - assets/images/content/
+    - assets/images/reviews/
     - assets/icons/categories/
 
 
