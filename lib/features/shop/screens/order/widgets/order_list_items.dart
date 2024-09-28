@@ -15,10 +15,10 @@ class TOrderListItems extends StatelessWidget {
     return ListView.separated(
       shrinkWrap: true,
       itemCount: 10,
-      separatorBuilder: (_, __) => SizedBox(height: TSizes.spaceBtwItems,),
+      separatorBuilder: (_, __) => const SizedBox(height: TSizes.spaceBtwItems,),
       itemBuilder: (_, index) => TRoundedContainer(
         showBorder: true,
-        padding: EdgeInsets.all(TSizes.md),
+        padding: const EdgeInsets.all(TSizes.md),
         backgroundColor: dark ? TColors.dark : TColors.light,
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -27,8 +27,8 @@ class TOrderListItems extends StatelessWidget {
             Row(
               children: [
                 //icon
-                Icon(Iconsax.ship),
-                SizedBox(width: TSizes.spaceBtwItems / 2,),
+                const Icon(Iconsax.ship),
+                const SizedBox(width: TSizes.spaceBtwItems / 2,),
       
                 //status and date
                 Expanded(
@@ -47,10 +47,10 @@ class TOrderListItems extends StatelessWidget {
                 ),
       
                 //icon
-                IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_34, size: TSizes.iconSm,))
+                IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_34, size: TSizes.iconSm,))
               ],
             ),
-            SizedBox(height: TSizes.spaceBtwItems,),
+            const SizedBox(height: TSizes.spaceBtwItems,),
       
             //ROW 2
             Row(
@@ -60,8 +60,8 @@ class TOrderListItems extends StatelessWidget {
                   child: Row(
                     children: [
                       //icon
-                      Icon(Iconsax.tag),
-                      SizedBox(width: TSizes.spaceBtwItems / 2,),
+                      const Icon(Iconsax.tag),
+                      const SizedBox(width: TSizes.spaceBtwItems / 2,),
                   
                       //status and date
                       Expanded(
@@ -89,8 +89,8 @@ class TOrderListItems extends StatelessWidget {
                   child: Row(
                     children: [
                       //icon
-                      Icon(Iconsax.calendar),
-                      SizedBox(width: TSizes.spaceBtwItems / 2,),
+                      const Icon(Iconsax.calendar),
+                      const SizedBox(width: TSizes.spaceBtwItems / 2,),
                   
                       //status and date
                       Expanded(

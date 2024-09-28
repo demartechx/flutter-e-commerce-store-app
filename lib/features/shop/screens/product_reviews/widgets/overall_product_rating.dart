@@ -13,7 +13,7 @@ class TOverallProductRating extends StatelessWidget {
         Expanded(flex: 3, child: Text('4.8', style: Theme.of(context).textTheme.displayLarge,)),
         const Expanded(
           flex: 7,
-          child: const Column(
+          child: Column(
             children: [
               TRatingProgressIndicator(text: '5', value: 1.0,),
               TRatingProgressIndicator(text: '4', value: 0.8,),

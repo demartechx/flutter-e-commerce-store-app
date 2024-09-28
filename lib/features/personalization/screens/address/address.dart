@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/products/t_rounded_container.dart';
 import 'package:t_store/features/personalization/screens/address/add_new_address.dart';
 import 'package:t_store/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -28,7 +27,7 @@ class UserAddressScreen extends StatelessWidget {
       body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: const Column(
+          child: Column(
             children: [
              TSingleAddress(selectedAddress: false),
              TSingleAddress(selectedAddress: true),

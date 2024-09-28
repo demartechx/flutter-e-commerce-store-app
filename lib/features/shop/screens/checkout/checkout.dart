@@ -1,9 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/products/cart/cart_item.dart';
 import 'package:t_store/common/widgets/products/cart/coupon_widget.dart';
 import 'package:t_store/common/widgets/products/t_rounded_container.dart';
 import 'package:t_store/common/widgets/success_screen/success_screen.dart';

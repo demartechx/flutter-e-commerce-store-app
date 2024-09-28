@@ -26,14 +26,14 @@ class TBillingPaymentSection extends StatelessWidget {
               height: 35,
               backgroundColor: dark ? TColors.light : TColors.white,
               padding: const EdgeInsets.all(TSizes.sm),
-              child: Image(image: AssetImage(TImages.paypal), fit: BoxFit.contain,),
+              child: const Image(image: AssetImage(TImages.paypal), fit: BoxFit.contain,),
             ),
-            SizedBox(width: TSizes.spaceBtwItems / 2,),
+            const SizedBox(width: TSizes.spaceBtwItems / 2,),
             Text('Paypal', style: Theme.of(context).textTheme.bodyLarge,),
   
           ],
         ),
-        SizedBox(height: TSizes.spaceBtwItems / 2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2,),
       ],
     );
   }

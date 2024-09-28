@@ -21,7 +21,7 @@ class TCartCounterIcon extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     return Stack(children: [
       IconButton(
-          onPressed: ()=> Get.to(() => CartScreen()),
+          onPressed: ()=> Get.to(() => const CartScreen()),
           icon: Icon(
             Iconsax.shopping_bag,
             color: iconColor,
